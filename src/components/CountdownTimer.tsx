@@ -9,7 +9,7 @@ const CountdownTimer: React.FC = () => {
 
   return (
     <div>
-      Countdown: {counter}
+      Countdown: {counter > 0 ? counter : 'Try Again' }
     </div>
   )
 }
