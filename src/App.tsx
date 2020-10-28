@@ -1,16 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+
+import { CountdownTimer }  from "./components/CountdownTimer";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          We Don't Go To Ravenholm
-        </p>
-      </header>
+      <CountdownTimer />
     </div>
   );
 }
