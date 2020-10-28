@@ -1,9 +1,19 @@
 import React from 'react';
 
-export const CountdownTimer = () => {
+const CountdownTimer: React.FC = () => {
+  const [counter, setCounter] = React.useState(60);
+
+  React.useEffect(() => {
+    counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
+  }, [counter]);
+
   return (
     <div>
-      <h1>Hello from CountdownTimer</h1>
+      Countdown: {counter}
     </div>
   )
 }
+
+export default CountdownTimer;
+
+
