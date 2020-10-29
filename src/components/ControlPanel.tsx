@@ -5,8 +5,8 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
   const [steps, setSteps] = React.useState(initial);
 
   const launch = () => {
-    if (steps === 10) {
-      alert("Launch!")
+    if (steps === 9) {
+      alert("Launch!");
     }
   }
   
@@ -51,7 +51,7 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
           Launch
           </button>
       </div>
-      <NewGameButton />
+      <NewGameButton status={steps}/>
     </div>
   )
 }
