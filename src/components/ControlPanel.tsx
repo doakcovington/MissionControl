@@ -12,7 +12,7 @@ const ControlPanel: React.FC = () => {
       <div className = 'external-tank'>
         <button>External Tank</button>
       </div>
-      <div className = 'vent hood'>
+      <div className = 'vent-hood'>
         <button>Vent Hood</button>
       </div>
       <div className = 'boil-off-vent'>
