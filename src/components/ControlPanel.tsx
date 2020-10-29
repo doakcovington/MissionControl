@@ -2,6 +2,12 @@ import React from 'react';
 
 const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
   const [steps, setSteps] = React.useState(initial);
+
+  const launch = () => {
+    if (steps === 10) {
+      alert("Launch!")
+    }
+  }
   
   return (
     <div className = "panel">
@@ -36,7 +42,13 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
         <button onClick={() => setSteps(9)}>Main Engine</button>
       </div>
       <div className = 'launch'>
-        <button onClick={() => setSteps(10)}>Launch</button>
+        <button 
+          onClick={() => {
+            setSteps(10);
+            launch();
+          }}>
+          Launch
+          </button>
       </div>
     </div>
   )
