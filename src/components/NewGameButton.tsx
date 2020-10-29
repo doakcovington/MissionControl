@@ -1,9 +1,9 @@
 import React from 'react';
 
-const NewGameButton: React.FC = () => {
+const NewGameButton: React.FC<{status: number}> = ({status}) => {
   return (
     <div>
-      <button>Hello From NewGameButton Component</button>
+      {status === 10 ? <button>New Game</button> : null}
     </div>
   )
 }
