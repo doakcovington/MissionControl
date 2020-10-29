@@ -1,4 +1,5 @@
 import React from 'react';
+import NewGameButton from './NewGameButton';
 
 const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
   const [steps, setSteps] = React.useState(initial);
@@ -50,6 +51,7 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
           Launch
           </button>
       </div>
+      <NewGameButton />
     </div>
   )
 }
