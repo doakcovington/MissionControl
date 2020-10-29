@@ -1,37 +1,42 @@
 import React from 'react';
 
-const ControlPanel: React.FC = () => {
+const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
+  const [steps, setSteps] = React.useState(initial);
+  
   return (
     <div className = "panel">
+      <div className = 'steps'>
+        <p>You've Completed Step: {steps}</p>
+      </div>
       <div className = 'retract'>
-        <button>Retract Arm</button>
+        <button onClick={() => setSteps(1)}>Retract Arm</button>
       </div>
       <div className = 'apu'>
-        <button>Auxiliary Power Units</button>
+        <button onClick={() => setSteps(2)}>Auxiliary Power Units</button>
       </div>
       <div className = 'external-tank'>
-        <button>External Tank</button>
+        <button onClick={() => setSteps(3)}>External Tank</button>
       </div>
       <div className = 'vent-hood'>
-        <button>Vent Hood</button>
+        <button onClick={() => setSteps(4)}>Vent Hood</button>
       </div>
       <div className = 'boil-off-vent'>
-        <button>Boil Off vent</button>
+        <button onClick={() => setSteps(5)}>Boil Off vent</button>
       </div>
       <div className = 'tls'>
-        <button>Terminal Launch Sequence</button>
+        <button onClick={() => setSteps(6)}>Terminal Launch Sequence</button>
       </div>
       <div className = 'srb'>
-        <button>Hydraulic Power Units</button>
+        <button onClick={() => setSteps(7)}>Hydraulic Power Units</button>
       </div>
       <div className = 'destruct-system'>
-        <button>Safety Destruct System</button>
+        <button onClick={() => setSteps(8)}>Safety Destruct System</button>
       </div>
       <div className = 'main-engine'>
-        <button>Main Engine</button>
+        <button onClick={() => setSteps(9)}>Main Engine</button>
       </div>
       <div className = 'launch'>
-        <button>Launch</button>
+        <button onClick={() => setSteps(10)}>Launch</button>
       </div>
     </div>
   )
