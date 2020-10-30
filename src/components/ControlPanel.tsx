@@ -1,5 +1,4 @@
 import React from 'react';
-import NewGameButton from './NewGameButton';
 
 const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
   const [steps, setSteps] = React.useState(initial);
@@ -9,7 +8,7 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
       alert("Launch!");
     }
   }
-  
+
   return (
     <div className = "panel">
       <div className = 'steps'>
@@ -51,7 +50,9 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
           Launch
           </button>
       </div>
-      <NewGameButton status={steps}/>
+      <div>
+        {steps === 10 ? <button onClick={() => setSteps(0)}>New Game</button> : null}
+      </div>
     </div>
   )
 }
