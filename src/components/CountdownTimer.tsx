@@ -1,7 +1,7 @@
 import React from 'react';
 
-const CountdownTimer: React.FC = () => {
-  const [counter, setCounter] = React.useState(60);
+const CountdownTimer: React.FC<{timer: number}> = ({timer}) => {
+  const [counter, setCounter] = React.useState(timer);
 
   React.useEffect(() => {
     counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);

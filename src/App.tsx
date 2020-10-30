@@ -1,14 +1,11 @@
 import React from "react";
 import './App.css';
-
-import CountdownTimer from "./components/CountdownTimer";
-import ControlPanel from './components/ControlPanel';
+import FlightControl from './components/FlightControl';
 
 function App() {
   return (
     <div className="App">
-      <CountdownTimer />
-      <ControlPanel />
+      <FlightControl />
     </div>
   );
 }
