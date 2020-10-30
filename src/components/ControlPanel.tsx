@@ -2,15 +2,29 @@ import React from 'react';
 
 const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
   const [steps, setSteps] = React.useState(initial);
+  const [counter, setCounter] = React.useState(60);
+
+  React.useEffect(() => {
+    counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
+  }, [counter]);
+
+  const resetCounter = () => {
+    setCounter(60);
+  }
+
 
   const launch = () => {
     if (steps === 9) {
       alert("Launch!");
     }
   }
+  
 
   return (
     <div className = "panel">
+      <div className= 'counter'>
+        T-Minus: {counter} Seconds
+      </div>
       <div className = 'steps'>
         <p>You've Completed Step: {steps}</p>
       </div>
@@ -51,7 +65,12 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
           </button>
       </div>
       <div>
-        {steps === 10 ? <button onClick={() => setSteps(0)}>New Game</button> : null}
+        {steps === 10 ? <button onClick={() => {
+          setSteps(0);
+          resetCounter();
+          }}>
+            New Game
+          </button> : null}
       </div>
     </div>
   )
