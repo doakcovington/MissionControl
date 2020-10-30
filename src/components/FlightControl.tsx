@@ -1,9 +1,10 @@
 import React from 'react';
+import CountdownTimer from './CountdownTimer';
 
 const FlightControl: React.FC = () => {
   return (
     <div>
-      Flight Control Component
+      <CountdownTimer timer={60}/>
     </div>
   )
 }
