@@ -17,9 +17,8 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
     console.log('status', status, 'steps', steps)
     if (status === steps) {
       console.log(true);
-      setStatus(status + 1);
     } else {
-      console.log(false);
+      alert('You missed a step')
     }
   }
 
@@ -30,8 +29,8 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
   }
 
   const handleClick = () => {
-    setSteps(1);
     checkStatus();
+    setSteps(steps + 1);
   }
   
 
@@ -46,69 +45,63 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
       <div className = 'retract'>
         <button onClick={() => {
           handleClick();
+          setStatus(1);
           }}>Retract Arm</button>
       </div>
       <div className = 'apu'>
         <button onClick={() => {
-          checkStatus();
-          setSteps(2);
+          handleClick();
+          setStatus(2);
           }}>Auxiliary Power Units</button>
       </div>
       <div className = 'external-tank'>
         <button onClick={() => {
-          setSteps(3)
-          checkStatus();
+          handleClick();
+          setStatus(3);
           }}>External Tank</button>
       </div>
       <div className = 'vent-hood'>
         <button onClick={() => {
-          setSteps(4);
+          handleClick();
           setStatus(4);
-          checkStatus();
           }}>Vent Hood</button>
       </div>
       <div className = 'boil-off-vent'>
         <button onClick={() => {
-          setSteps(5);
+          handleClick();
           setStatus(5);
-          checkStatus();
           }}>Boil Off vent</button>
       </div>
       <div className = 'tls'>
         <button onClick={() => {
-          setSteps(6)
+          handleClick();
           setStatus(6);
-          checkStatus();
           }}>Terminal Launch Sequence</button>
       </div>
       <div className = 'srb'>
         <button onClick={() => {
-          setSteps(7);
+          handleClick();
           setStatus(7);
-          checkStatus();
           }}>Hydraulic Power Units</button>
       </div>
       <div className = 'destruct-system'>
         <button onClick={() => {
-          setSteps(8);
+          handleClick();
           setStatus(8);
-          checkStatus();
           }}>Safety Destruct System</button>
       </div>
       <div className = 'main-engine'>
         <button onClick={() => {
-          setSteps(9);
+          handleClick();
           setStatus(9);
-          checkStatus();
           }}>Main Engine</button>
       </div>
       <div className = 'launch'>
         <button 
           onClick={() => {
-            setSteps(10);
-            setStatus(10);
-            checkStatus();
+            handleClick();
             launch();
+            setStatus(2);
           }}>
           Launch
           </button>
