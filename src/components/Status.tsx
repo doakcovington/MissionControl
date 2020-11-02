@@ -8,13 +8,13 @@ const Status: React.FC<{report?: boolean}> = ({report}) => {
   return (
     <div>
       <CardDeck>
-        <Card bg={report == true ? "danger" : "light"}>
+        <Card  border="danger" bg={report == true ? "danger" : "light"}>
           <Card.Body></Card.Body>
         </Card>
-        <Card bg={report == true ? "warning" : "light"}>
+        <Card  border="warning" bg={report == true ? "warning" : "light"}>
           <Card.Body></Card.Body>
         </Card>
-        <Card bg={report == true ? "success" : "light"}>
+        <Card  border="success" bg={report == true ? "success" : "light"}>
           <Card.Body></Card.Body>
         </Card>
       </CardDeck>
