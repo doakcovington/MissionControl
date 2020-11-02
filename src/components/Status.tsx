@@ -1,21 +1,23 @@
 import React from 'react';
-import CardGroup from 'react-bootstrap/CardGroup'
+import CardDeck from 'react-bootstrap/CardDeck';
 import Card from 'react-bootstrap/Card';
 
-const Status: React.FC = () => {
+const Status: React.FC<{report?: boolean}> = ({report}) => {
+
+
   return (
     <div>
-      <CardGroup>
-        <Card bg="danger">
+      <CardDeck>
+        <Card bg={report == true ? "danger" : "light"}>
           <Card.Body></Card.Body>
         </Card>
-        <Card bg="warning">
+        <Card bg={report == true ? "warning" : "light"}>
           <Card.Body></Card.Body>
         </Card>
-        <Card bg="success">
+        <Card bg={report == true ? "success" : "light"}>
           <Card.Body></Card.Body>
         </Card>
-      </CardGroup>
+      </CardDeck>
     </div>
   )
 }

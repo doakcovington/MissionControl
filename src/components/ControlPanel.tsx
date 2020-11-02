@@ -117,7 +117,7 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
             New Game
           </Button> : null}
       </div>
-      <Status />
+      <Status report={true}/>
     </div>
   )
 }
