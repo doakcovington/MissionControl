@@ -4,7 +4,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 const Instructions: React.FC = () => {
   return (
     <div>
-      <ListGroup>
+      <ListGroup className="mt-3">
         <ListGroup.Item>Retract Orbiter Access Arm</ListGroup.Item>
         <ListGroup.Item>Activate the Auxiliary Power Units (APU)</ListGroup.Item>
         <ListGroup.Item>Close the Liquid Oxygen Vent on the External Tank</ListGroup.Item>
