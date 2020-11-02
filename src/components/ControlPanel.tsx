@@ -1,5 +1,4 @@
 import React from 'react';
-import Instructions from './Instructions';
 
 const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
   const [steps, setSteps] = React.useState(initial);
@@ -42,9 +41,6 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
       </div>
       <div className = 'steps'>
         <p>You've Completed Step: {steps}</p>
-      </div>
-      <div className='instructions'>
-        <Instructions />
       </div>
       <div className = 'retract'>
         <button onClick={() => {
