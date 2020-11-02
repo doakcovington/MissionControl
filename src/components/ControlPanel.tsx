@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 
 const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
   const [steps, setSteps] = React.useState(initial);
@@ -42,78 +43,78 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
       <div className = 'steps'>
         <p>You've Completed Step: {steps}</p>
       </div>
-      <div className = 'retract'>
-        <button onClick={() => {
+      <div className="mb-2">
+        <Button variant="outline-dark" onClick={() => {
           handleClick();
           setStatus(1);
-          }}>Retract Arm</button>
+          }}>Retract Arm</Button>
       </div>
-      <div className = 'apu'>
-        <button onClick={() => {
+      <div className="mb-2">
+        <Button variant="outline-dark" onClick={() => {
           handleClick();
           setStatus(2);
-          }}>Auxiliary Power Units</button>
+          }}>Auxiliary Power Units</Button>
       </div>
-      <div className = 'external-tank'>
-        <button onClick={() => {
+      <div className="mb-2">
+        <Button variant="outline-dark" onClick={() => {
           handleClick();
           setStatus(3);
-          }}>Liquid O2 Vent</button>
+          }}>Liquid O2 Vent</Button>
       </div>
-      <div className = 'vent-hood'>
-        <button onClick={() => {
+      <div className="mb-2">
+        <Button variant="outline-dark" onClick={() => {
           handleClick();
           setStatus(4);
-          }}>Vent Hood</button>
+          }}>Vent Hood</Button>
       </div>
-      <div className = 'boil-off-vent'>
-        <button onClick={() => {
+      <div className="mb-2">
+        <Button variant="outline-dark" onClick={() => {
           handleClick();
           setStatus(5);
-          }}>Boil Off vent</button>
+          }}>Boil Off vent</Button>
       </div>
-      <div className = 'tls'>
-        <button onClick={() => {
+      <div className="mb-2">
+        <Button variant="outline-dark" onClick={() => {
           handleClick();
           setStatus(6);
-          }}>Terminal Launch Sequence</button>
+          }}>Terminal Launch Sequence</Button>
       </div>
-      <div className = 'srb'>
-        <button onClick={() => {
+      <div className="mb-2">
+        <Button variant="outline-dark" onClick={() => {
           handleClick();
           setStatus(7);
-          }}>Hydraulic Power Units</button>
+          }}>Hydraulic Power Units</Button>
       </div>
-      <div className = 'destruct-system'>
-        <button onClick={() => {
+      <div className="mb-2">
+        <Button variant="outline-dark" onClick={() => {
           handleClick();
           setStatus(8);
-          }}>Safety Destruct System</button>
+          }}>Safety Destruct System</Button>
       </div>
-      <div className = 'main-engine'>
-        <button onClick={() => {
+      <div className="mb-2">
+        <Button variant="outline-dark" onClick={() => {
           handleClick();
           setStatus(9);
-          }}>Main Engine</button>
+          }}>Main Engine</Button>
       </div>
-      <div className = 'launch'>
-        <button 
+      <div className="mb-2">
+        <Button variant="danger"
           onClick={() => {
             handleClick();
             launch();
             setStatus(2);
           }}>
           Launch
-          </button>
+          </Button>
       </div>
       <div>
-        {steps === 10 ? <button onClick={() => {
+        {steps === 10 ? <Button onClick={() => {
           setSteps(0);
           resetCounter();
           setStatus(0);
           }}>
             New Game
-          </button> : null}
+          </Button> : null}
       </div>
     </div>
   )
