@@ -58,7 +58,7 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
         <button onClick={() => {
           handleClick();
           setStatus(3);
-          }}>External Tank</button>
+          }}>Liquid O2 Vent</button>
       </div>
       <div className = 'vent-hood'>
         <button onClick={() => {

@@ -1,11 +1,22 @@
 import React from 'react';
 import ControlPanel from './ControlPanel';
+import Instructions from './Instructions';
+import Col from 'react-bootstrap/Col'
+import { Container } from 'react-bootstrap';
+import Row from 'react-bootstrap/Row'
 
 const FlightControl: React.FC = () => {
   return (
-    <div>
-      <ControlPanel />
-    </div>
+    <Container>
+      <Row>
+        <Col>
+          <ControlPanel />
+        </Col>
+        <Col>
+          <Instructions />
+        </Col>
+      </Row>
+    </Container>
   )
 }
 
