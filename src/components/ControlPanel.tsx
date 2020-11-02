@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
+import Status from './Status';
 
 const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
   const [steps, setSteps] = React.useState(initial);
@@ -18,8 +19,10 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
     console.log('status', status, 'steps', steps)
     if (status === steps) {
       console.log(true);
+      return true;
     } else {
-      alert('You missed a step')
+      alert('You missed a step');
+      return false;
     }
   }
 
@@ -116,6 +119,7 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
             New Game
           </Button> : null}
       </div>
+      <Status report={steps === status? true : false}/>
     </div>
   )
 }
