@@ -111,7 +111,7 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
           </Button>
       </div>
       <div>
-        {steps === 10 ? <Button onClick={() => {
+        {steps === 10 || counter === 0 ? <Button className="mb-2" onClick={() => {
           setSteps(0);
           resetCounter();
           setStatus(0);
