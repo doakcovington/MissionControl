@@ -4,7 +4,6 @@ import Card from 'react-bootstrap/Card';
 
 const Status: React.FC<{report?: boolean, time: number}> = ({report, time}) => {
 
-
   return (
     <div>
       <Card border="secondary">
@@ -16,7 +15,7 @@ const Status: React.FC<{report?: boolean, time: number}> = ({report, time}) => {
           <Card  border="warning" bg={time < 30 ? "warning" : "light" }>
             <Card.Body></Card.Body>
           </Card>
-          <Card  border="success" bg={report == true && time < 0 ? "success" : "light"}>
+          <Card  border="success" bg={report == true && time > 0  ? "success" : "light"}>
             <Card.Body></Card.Body>
           </Card>
           </CardDeck>
