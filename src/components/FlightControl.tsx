@@ -1,23 +1,39 @@
 import React from 'react';
 import ControlPanel from './ControlPanel';
 import Instructions from './Instructions';
-import Col from 'react-bootstrap/Col'
+import Col from 'react-bootstrap/Col';
 import { Container } from 'react-bootstrap';
-import Row from 'react-bootstrap/Row'
+import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
 
 const FlightControl: React.FC = () => {
-  return (
+  const [start, setStart] = React.useState(false);
+
+  if (start === false) {
+    return (
     <Container>
       <Row>
-        <Col>
-          <ControlPanel />
-        </Col>
-        <Col>
-          <Instructions />
+        <Col className="mt-4">
+          <Button size="lg" onClick={() =>  {setStart(true)}}>Start</Button>
         </Col>
       </Row>
-    </Container>
-  )
+    </Container>)
+  } else {
+    return (
+      <div>
+        <Container>
+          <Row>
+            <Col>
+              <ControlPanel />
+            </Col>
+            <Col>
+              <Instructions />
+            </Col>
+          </Row>
+      </Container>
+    </div>
+    )
+  }
 }
 
 export default FlightControl;
