@@ -2,7 +2,7 @@ import React from 'react';
 import CardDeck from 'react-bootstrap/CardDeck';
 import Card from 'react-bootstrap/Card';
 
-const Status: React.FC<{report?: boolean}> = ({report}) => {
+const Status: React.FC<{report?: boolean, time: number}> = ({report, time}) => {
 
 
   return (
@@ -13,7 +13,7 @@ const Status: React.FC<{report?: boolean}> = ({report}) => {
           <Card  border="danger" bg={report == true ? "light" : "danger"}>
             <Card.Body></Card.Body>
           </Card>
-          <Card  border="warning" bg={report == true ? "light" : "warning"}>
+          <Card  border="warning" bg={time < 30 ? "warning" : "light" }>
             <Card.Body></Card.Body>
           </Card>
           <Card  border="success" bg={report == true ? "success" : "light"}>
