@@ -119,7 +119,7 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
             New Game
           </Button> : null}
       </div>
-      <Status report={steps === status? true : false}/>
+      <Status report={steps === status ? true : false} time={counter}/>
     </div>
   )
 }
