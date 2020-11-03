@@ -9,23 +9,15 @@ import Button from 'react-bootstrap/Button';
 const FlightControl: React.FC = () => {
   const [start, setStart] = React.useState(false);
 
-  // return (
-  //   <div>
-  //     <button onClick={() => {setStart(true)}}>Start</button>
-  //     {start === true ?       <Container>
-  //     <Row>
-  //       <Col>
-  //         <ControlPanel />
-  //       </Col>
-  //       <Col>
-  //         <Instructions />
-  //       </Col>
-  //     </Row>
-  //     </Container> : null}
-  //   </div>
-  // )
   if (start === false) {
-    return (<Button onClick={() =>  {setStart(true)}}>Start</Button>)
+    return (
+    <Container>
+      <Row>
+        <Col className="mt-4">
+          <Button size="lg" onClick={() =>  {setStart(true)}}>Start</Button>
+        </Col>
+      </Row>
+    </Container>)
   } else {
     return (
       <div>
