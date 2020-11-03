@@ -10,13 +10,13 @@ const Status: React.FC<{report?: boolean, time: number}> = ({report, time}) => {
       <Card border="secondary">
         <Card.Body>
           <CardDeck>
-          <Card  border="danger" bg={report == true ? "light" : "danger"}>
+          <Card  border="danger" bg={report == true && time > 0 ? "light" : "danger"}>
             <Card.Body></Card.Body>
           </Card>
           <Card  border="warning" bg={time < 30 ? "warning" : "light" }>
             <Card.Body></Card.Body>
           </Card>
-          <Card  border="success" bg={report == true ? "success" : "light"}>
+          <Card  border="success" bg={report == true && time < 0 ? "success" : "light"}>
             <Card.Body></Card.Body>
           </Card>
           </CardDeck>
