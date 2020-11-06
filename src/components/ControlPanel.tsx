@@ -47,61 +47,61 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
         <p>You've Completed Step: {steps}</p>
       </div>
       <div className="mb-2">
-        <Button variant="outline-dark" onClick={() => {
+        <Button size="lg" variant="dark" onClick={() => {
           handleClick();
           setStatus(1);
           }}>Retract Arm</Button>
       </div>
       <div className="mb-2">
-        <Button variant="outline-dark" onClick={() => {
+        <Button size="lg" variant="dark" onClick={() => {
           handleClick();
           setStatus(2);
           }}>Auxiliary Power Units</Button>
       </div>
       <div className="mb-2">
-        <Button variant="outline-dark" onClick={() => {
+        <Button size="lg" variant="dark" onClick={() => {
           handleClick();
           setStatus(3);
           }}>Liquid O2 Vent</Button>
       </div>
       <div className="mb-2">
-        <Button variant="outline-dark" onClick={() => {
+        <Button size="lg" variant="dark" onClick={() => {
           handleClick();
           setStatus(4);
           }}>Vent Hood</Button>
       </div>
       <div className="mb-2">
-        <Button variant="outline-dark" onClick={() => {
+        <Button size="lg" variant="dark" onClick={() => {
           handleClick();
           setStatus(5);
           }}>Boil Off vent</Button>
       </div>
       <div className="mb-2">
-        <Button variant="outline-dark" onClick={() => {
+        <Button size="lg" variant="dark" onClick={() => {
           handleClick();
           setStatus(6);
           }}>Terminal Launch Sequence</Button>
       </div>
       <div className="mb-2">
-        <Button variant="outline-dark" onClick={() => {
+        <Button size="lg" variant="dark" onClick={() => {
           handleClick();
           setStatus(7);
           }}>Hydraulic Power Units</Button>
       </div>
       <div className="mb-2">
-        <Button variant="outline-dark" onClick={() => {
+        <Button size="lg" variant="dark" onClick={() => {
           handleClick();
           setStatus(8);
           }}>Safety Destruct System</Button>
       </div>
       <div className="mb-2">
-        <Button variant="outline-dark" onClick={() => {
+        <Button size="lg" variant="dark" onClick={() => {
           handleClick();
           setStatus(9);
           }}>Main Engine</Button>
       </div>
       <div className="mb-2">
-        <Button variant="danger"
+        <Button size="lg" variant="danger"
           onClick={() => {
             handleClick();
             launch();
