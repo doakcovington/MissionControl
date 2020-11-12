@@ -5,6 +5,7 @@ const Instructions: React.FC = () => {
   return (
     <div>
       <ListGroup className="mt-3">
+        <ListGroup.Item>Load Propellant</ListGroup.Item>
         <ListGroup.Item>Retract Orbiter Access Arm</ListGroup.Item>
         <ListGroup.Item>Activate the Auxiliary Power Units (APU)</ListGroup.Item>
         <ListGroup.Item>Close the Liquid Oxygen Vent on the External Tank</ListGroup.Item>
