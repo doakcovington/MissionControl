@@ -1,6 +1,9 @@
 import React from 'react';
 import Button from 'react-bootstrap/Button';
 import Status from './Status';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
   const [steps, setSteps] = React.useState(initial);
@@ -46,7 +49,10 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
       <div className = 'steps'>
         <p>You've Completed Step: {steps}</p>
       </div>
-      <div className="mb-2">
+      <Container>
+        <Row>
+          <Col>
+          <div className="mb-2">
         <Button size="lg" variant="dark" onClick={() => {
           handleClick();
           setStatus(1);
@@ -76,30 +82,36 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
           setStatus(5);
           }}>Boil Off vent</Button>
       </div>
-      <div className="mb-2">
-        <Button size="lg" variant="dark" onClick={() => {
-          handleClick();
-          setStatus(6);
-          }}>Terminal Launch Sequence</Button>
-      </div>
-      <div className="mb-2">
-        <Button size="lg" variant="dark" onClick={() => {
-          handleClick();
-          setStatus(7);
-          }}>Hydraulic Power Units</Button>
-      </div>
-      <div className="mb-2">
-        <Button size="lg" variant="dark" onClick={() => {
-          handleClick();
-          setStatus(8);
-          }}>Safety Destruct System</Button>
-      </div>
-      <div className="mb-2">
-        <Button size="lg" variant="dark" onClick={() => {
-          handleClick();
-          setStatus(9);
-          }}>Main Engine</Button>
-      </div>
+          </Col>
+          <Col>
+            <div className="mb-2">
+          <Button size="lg" variant="dark" onClick={() => {
+            handleClick();
+            setStatus(6);
+            }}>Terminal Launch Sequence</Button>
+        </div>
+        <div className="mb-2">
+          <Button size="lg" variant="dark" onClick={() => {
+            handleClick();
+            setStatus(7);
+            }}>Hydraulic Power Units</Button>
+        </div>
+        <div className="mb-2">
+          <Button size="lg" variant="dark" onClick={() => {
+            handleClick();
+            setStatus(8);
+            }}>Safety Destruct System</Button>
+        </div>
+        <div className="mb-2">
+            <Button size="lg" variant="dark" onClick={() => {
+            handleClick();
+            setStatus(9);
+            }}>Main Engine</Button>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+      
       <div className="mb-2">
         <Button size="lg" variant="danger"
           onClick={() => {
