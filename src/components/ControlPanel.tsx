@@ -30,7 +30,7 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
   }
 
   const launch = () => {
-    if (steps === 9) {
+    if (steps === 10) {
       alert("Launch!");
     }
   }
@@ -53,60 +53,77 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
         <Row>
           <Col>
           <div className="mb-2">
-        <Button size="lg" variant="dark" onClick={() => {
-          handleClick();
-          setStatus(1);
-          }}>Retract Arm</Button>
-      </div>
-      <div className="mb-2">
-        <Button size="lg" variant="dark" onClick={() => {
-          handleClick();
-          setStatus(2);
-          }}>Auxiliary Power Units</Button>
-      </div>
-      <div className="mb-2">
-        <Button size="lg" variant="dark" onClick={() => {
-          handleClick();
-          setStatus(3);
-          }}>Liquid O2 Vent</Button>
-      </div>
-      <div className="mb-2">
-        <Button size="lg" variant="dark" onClick={() => {
-          handleClick();
-          setStatus(4);
-          }}>Vent Hood</Button>
-      </div>
-      <div className="mb-2">
-        <Button size="lg" variant="dark" onClick={() => {
-          handleClick();
-          setStatus(5);
-          }}>Boil Off vent</Button>
-      </div>
+              <Button size="lg" variant="dark" onClick={() => {
+                handleClick();
+                setStatus(1);
+                }}>Propellant-Loading
+              </Button>
+            </div>
+            <div className="mb-2">
+              <Button size="lg" variant="dark" onClick={() => {
+                handleClick();
+                setStatus(2);
+                }}>Retract Arm
+              </Button>
+            </div>
+            <div className="mb-2">
+              <Button size="lg" variant="dark" onClick={() => {
+                handleClick();
+                setStatus(3);
+                }}>Auxiliary Power Units
+              </Button>
+            </div>
+            <div className="mb-2">
+              <Button size="lg" variant="dark" onClick={() => {
+                handleClick();
+                setStatus(4);
+                }}>Liquid O2 Vent
+              </Button>
+            </div>
+            <div className="mb-2">
+              <Button size="lg" variant="dark" onClick={() => {
+                handleClick();
+                setStatus(5);
+                }}>Vent Hood
+              </Button>
+            </div>
           </Col>
+          
           <Col>
             <div className="mb-2">
-          <Button size="lg" variant="dark" onClick={() => {
-            handleClick();
-            setStatus(6);
-            }}>Terminal Launch Sequence</Button>
-        </div>
-        <div className="mb-2">
-          <Button size="lg" variant="dark" onClick={() => {
-            handleClick();
-            setStatus(7);
-            }}>Hydraulic Power Units</Button>
-        </div>
-        <div className="mb-2">
-          <Button size="lg" variant="dark" onClick={() => {
-            handleClick();
-            setStatus(8);
-            }}>Safety Destruct System</Button>
-        </div>
-        <div className="mb-2">
-            <Button size="lg" variant="dark" onClick={() => {
-            handleClick();
-            setStatus(9);
-            }}>Main Engine</Button>
+              <Button size="lg" variant="dark" onClick={() => {
+                handleClick();
+                setStatus(6);
+                }}>Boil Off vent
+              </Button>
+            </div>
+            <div className="mb-2">
+              <Button size="lg" variant="dark" onClick={() => {
+                handleClick();
+                setStatus(7);
+                }}>TLS
+              </Button>
+            </div>
+            <div className="mb-2">
+              <Button size="lg" variant="dark" onClick={() => {
+                handleClick();
+                setStatus(8);
+                }}>Hydraulic Power Units
+              </Button>
+            </div>
+            <div className="mb-2">
+              <Button size="lg" variant="dark" onClick={() => {
+                handleClick();
+                setStatus(9);
+                }}>Safety Destruct System
+              </Button>
+            </div>
+            <div className="mb-2">
+              <Button size="lg" variant="dark" onClick={() => {
+                handleClick();
+                setStatus(10);
+                }}>Main Engine
+              </Button>
             </div>
           </Col>
         </Row>
@@ -123,7 +140,7 @@ const ControlPanel: React.FC<{ initial?: number }> = ({ initial = 0 }) => {
           </Button>
       </div>
       <div>
-        {steps === 10 || counter === 0 ? <Button className="mb-2" onClick={() => {
+        {steps === 11 || counter === 0 ? <Button className="mb-2" onClick={() => {
           setSteps(0);
           resetCounter();
           setStatus(0);
