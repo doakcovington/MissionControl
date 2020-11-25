@@ -12,6 +12,7 @@ const FlightControl: React.FC = () => {
   if (start === false) {
     return (
     <Container>
+      <h1>Mission Control</h1>
       <Row>
         <Col className="mt-4">
           <Button size="lg" onClick={() =>  {setStart(true)}}>Start</Button>
